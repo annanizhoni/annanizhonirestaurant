@@ -7,9 +7,9 @@ const Offer = () => {
       {/* TEXT CONTAINER */}
       <div className="flex-1 flex flex-col justify-center items-center text-center gap-8 p-6">
         <h1 className="text-white text-5xl font-bold xl:text-6xl">
-          SMELL IT! EAT IT!
+          Broiled Salmon With Pepita Salsa
         </h1>
-        <p className="text-white">Tasty taco with all the fixins</p>
+        <p className="text-white">This Week's Special</p>
         <button className="bg-teal-500 text-white rounded-md py-3 px-6">
           Order Now
         </button>
@@ -17,7 +17,7 @@ const Offer = () => {
       {/* IMAGE CONTAINER */}
       <div className="flex-1 w-full relative md:h-full">
         <Image
-          src="/offerProduct.png"
+          src="/salmondish.jpeg"
           alt="offerProduct"
           fill
           className="object-contain"

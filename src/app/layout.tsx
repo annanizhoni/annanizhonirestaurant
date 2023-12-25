@@ -8,12 +8,14 @@ import AuthProvider from "@/components/AuthProvider";
 import QueryProvider from "@/components/QueryProvider";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Favicon from "@/app/icon.ico";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lama Restaurant",
-  description: "Best food in town!",
+  title: "The Yucca Blossom",
+  description: "Navajo Cuisine",
+  icons: [{ rel: "icon", url: Favicon.src }],
 };
 
 export default function RootLayout({
@@ -26,7 +28,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <AuthProvider>
           <QueryProvider>
-            <div>
+            <div className="mb-24">
+              {" "}
+              {/* Add this line */}
               <Notification />
               <Navbar />
               {children}
