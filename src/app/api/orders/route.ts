@@ -17,6 +17,7 @@ export const GET = async (req: NextRequest) => {
           userEmail: session.user.email!,
         },
       });
+
       return new NextResponse(JSON.stringify(orders), { status: 200 });
     } catch (err) {
       console.log(err);

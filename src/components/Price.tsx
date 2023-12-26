@@ -12,9 +12,9 @@ const Price = ({ product }: { product: ProductType }) => {
 
   const { addToCart } = useCartStore();
 
-  useEffect(()=>{
-    useCartStore.persist.rehydrate()
-  },[])
+  useEffect(() => {
+    useCartStore.persist.rehydrate();
+  }, []);
 
   useEffect(() => {
     if (product.options?.length) {
@@ -24,7 +24,7 @@ const Price = ({ product }: { product: ProductType }) => {
     }
   }, [quantity, selected, product]);
 
-  const handleCart = ()=>{
+  const handleCart = () => {
     addToCart({
       id: product.id,
       title: product.title,
@@ -34,20 +34,20 @@ const Price = ({ product }: { product: ProductType }) => {
         optionTitle: product.options[selected].title,
       }),
       quantity: quantity,
-    })
-    toast.success("The product was added to the cart!")
-  }
+    });
+    toast.success("The product added to the cart!");
+  };
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="text-2xl font-bold text-orange-900">${total}</h2>
+      <h2 className="text-2xl font-bold">${total}</h2>
       {/* OPTIONS CONTAINER */}
       <div className="flex gap-4">
         {product.options?.length &&
           product.options?.map((option, index) => (
             <button
               key={option.title}
-              className="min-w-[6rem] p-2 ring-1 ring-orange-300 rounded-md"
+              className="min-w-[6rem] p-2 ring-1 ring-red-400 rounded-md"
               style={{
                 background: selected === index ? "rgb(248 113 113)" : "white",
                 color: selected === index ? "white" : "red",
@@ -61,7 +61,7 @@ const Price = ({ product }: { product: ProductType }) => {
       {/* QUANTITY AND ADD BUTTON CONTAINER */}
       <div className="flex justify-between items-center">
         {/* QUANTITY */}
-        <div className="flex justify-between w-full p-3 ring-1 ring-orange-900">
+        <div className="flex justify-between w-full p-3 ring-1 ring-red-500">
           <span>Quantity</span>
           <div className="flex gap-4 items-center">
             <button
@@ -79,7 +79,7 @@ const Price = ({ product }: { product: ProductType }) => {
         </div>
         {/* CART BUTTON */}
         <button
-          className="uppercase w-56 bg-teal-500 text-white p-3 ring-1 ring-teal-500"
+          className="uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500"
           onClick={handleCart}
         >
           Add to Cart

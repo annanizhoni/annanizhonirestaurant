@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 const Offer = () => {
   return (
@@ -11,8 +10,8 @@ const Offer = () => {
           Broiled Salmon With Pepita Salsa
         </h1>
         <p className="text-white">This Week's Special</p>
-        <button className="bg-teal-500 text-white py-4 px-8">
-          <Link href="/menu">Order Now</Link>
+        <button className="bg-teal-500 text-white rounded-md py-3 px-6">
+          Order Now
         </button>
       </div>
       {/* IMAGE CONTAINER */}

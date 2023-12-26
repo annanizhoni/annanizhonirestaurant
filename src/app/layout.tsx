@@ -1,7 +1,7 @@
 import Notification from "@/components/Notification";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Favicon from "@/app/icon.ico";
 
-const montserrat = Montserrat({ subsets: ["latin"], weight: ['400'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "The Yucca Blossom",
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={inter.className}>
         <AuthProvider>
           <QueryProvider>
             <div className="mb-24">
