@@ -9,7 +9,7 @@ const Offer = () => {
         <h1 className="text-white text-5xl font-bold xl:text-6xl">
           Broiled Salmon With Pepita Salsa
         </h1>
-        <p className="text-white">This Week's Special</p>
+        <p className="text-white">Special of the Week</p>
         <button className="bg-teal-500 text-white rounded-md py-3 px-6">
           Order Now
         </button>

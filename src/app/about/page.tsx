@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"; // Import the next/image component
 
 const About: React.FC = () => {
   return (
@@ -6,10 +7,11 @@ const About: React.FC = () => {
       {" "}
       {/* Added text-center here */}
       <div className="flex flex-col items-center">
-        <img
+        <Image
           src="/yblogo.png"
           alt="Yucca Blossom Logo"
-          className="w-1/2 md:w-1/3 lg:w-1/4 my-8"
+          width={400} // Set the appropriate width
+          height={300} // Set the appropriate height
         />
         <h1 className="text-3xl font-semibold leading-tight my-2">About Us</h1>
       </div>
@@ -36,29 +38,28 @@ const About: React.FC = () => {
       </p>
       <p className="mt-4">
         We invite locals and travelers alike to join us for a meal that is more
-        than just food—it's an experience. Whether you're seeking a casual
+        than just food; it is an experience. Whether you are seeking a casual
         breakfast, a business lunch, or an intimate dinner, our doors are open.
         Come in to share a meal, celebrate our culture, and create memories that
         will last a lifetime.
       </p>
       <p className="mt-4">
         We look forward to welcoming you to our table and sharing the joy of
-        Navajo cuisine with you. Ahéhee' (Thank You).
+        Navajo cuisine with you. Ahehee (Thank You).
       </p>
       <p className="mt-4 font-semibold">
         Starter code by Lama Dev and modified by Anna Nizhoni.
       </p>
       <br></br>
-      <iframe 
-  className="mx-auto"
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/gXlcwtS40LA?si=39tjoUqHJbERJ8IK" 
-  title="YouTube video player" 
-  frameBorder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  allowFullScreen
-></iframe>
+      <iframe
+        className="mx-auto"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/gXlcwtS40LA?si=39tjoUqHJbERJ8IK"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
       <br></br>
     </div>
   );
