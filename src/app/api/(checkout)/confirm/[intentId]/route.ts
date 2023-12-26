@@ -2,12 +2,18 @@ import { prisma } from "@/utils/connect";
 import { NextApiResponse, NextApiRequest } from "next";
 
 export const PUT = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { intentId } = req.query; // Access the intentId from the request query params
+  const intentId = Array.isArray(req.query.intentId)
+    ? req.query.intentId[0] // If it's an array, take the first element
+    : req.query.intentId;   // Otherwise, it's a single string
+
+  if (typeof intentId !== "string") {
+    return res.status(400).json({ message: "Invalid intentId" });
+  }
 
   try {
     await prisma.order.update({
       where: {
-        intent_id: intentId as string, // Cast intentId to string
+        intent_id: intentId,
       },
       data: { status: "Being prepared!" },
     });
