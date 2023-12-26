@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="min-h-12 md:min-h-24 p-4 lg:px-20 xl:px-40 text-orange-950 flex items-center justify-between">
+    <div className="min-h-12 md:min-h-24 p-4 lg:px-20 xl:px-40 text-orange-900 flex items-center justify-between">
       <Link href="/" className="font-semibold text-sm">
         The Yucca Blossom
       </Link>

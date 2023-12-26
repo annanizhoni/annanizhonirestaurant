@@ -32,7 +32,8 @@ const SuccessPage = () => {
           Payment successful. You are being redirected to the orders page.
           Please do not close the page.
         </p>
-        <ConfettiExplosion className="absolute m-auto" />
+      <ConfettiExplosion className="absolute m-auto"
+      />
       </div>
     </>
   );

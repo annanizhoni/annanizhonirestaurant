@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
 import { MenuType } from "@/types/types";
+import Link from "next/link";
+import React from "react";
 
 const getData = async () => {
   const res = await fetch("http://localhost:3000/api/categories", {
@@ -8,7 +8,7 @@ const getData = async () => {
   });
 
   if (!res.ok) {
-    throw new Error("Failed");
+    throw new Error("Failed!");
   }
 
   return res.json();
@@ -31,7 +31,7 @@ const MenuPage = async () => {
             <button
               className={`hidden 2xl:block bg-${category.color} text-${
                 category.color === "black" ? "white" : "red-500"
-              } py-2 px-4 rounded-md}`}
+              } py-2 px-4 rounded-md`}
             >
               Explore
             </button>
@@ -43,3 +43,4 @@ const MenuPage = async () => {
 };
 
 export default MenuPage;
+

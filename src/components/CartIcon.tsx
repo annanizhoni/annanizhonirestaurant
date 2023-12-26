@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useCartStore } from "@/utils/store";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
@@ -14,9 +14,9 @@ const CartIcon = () => {
     useCartStore.persist.rehydrate();
   }, []);
 
-  useEffect(() => {
-    useCartStore.persist.rehydrate();
-  }, []);
+  useEffect(()=>{
+    useCartStore.persist.rehydrate()
+  },[])
   return (
     <Link href={session?.user.isAdmin ? "/add" : "/cart"}>
       <div className="flex items-center gap-4">
@@ -29,7 +29,11 @@ const CartIcon = () => {
             className="object-contain"
           />
         </div>
-        {<span>Cart ({totalItems})</span>}
+        {session?.user.isAdmin ? (
+          <button className="p-1 bg-red-500 text-white rounded-md">Add product</button>
+        ) : (
+          <span>Cart ({totalItems})</span>
+        )}
       </div>
     </Link>
   );

@@ -7,12 +7,12 @@ import Link from "next/link";
 const data = [
   {
     id: 1,
-    title: "Indiginize Your Plate",
+    title: "Decolonizing the Dinner Table",
     image: "/taco.jpeg",
   },
   {
     id: 2,
-    title: "Navajo Nibbles",
+    title: "Decolonizing the Dinner Table",
     image: "/greenchiliburger.jpeg",
   },
   {
@@ -42,7 +42,7 @@ const Slider = () => {
           {data[currentSlide].title}
         </h1>
         <button className="bg-teal-500 text-white py-4 px-8">
-          <Link href="/menu">Order Now</Link>
+          <Link href="/menu">View Our Menu</Link>
         </button>
       </div>
       {/* IMAGE CONTAINER */}
