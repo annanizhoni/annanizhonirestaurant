@@ -25,6 +25,7 @@
     "zustand": "^4.4.7"
   },
   "devDependencies": {
+    "@types/next": "^9.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -36,7 +37,7 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": "20.10.x",   
-    "npm": "10.2.x"      
+    "node": "20.10.x",
+    "npm": "10.2.x"
   }
 }
